@@ -1,0 +1,308 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5241743716DAFFD100ECAB5E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5241743616DAFFD100ECAB5E /* Foundation.framework */; };
+		5241743C16DAFFD100ECAB5E /* EMF.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 5241743B16DAFFD100ECAB5E /* EMF.h */; };
+		5241748616DB01A700ECAB5E /* CLMComponent.m in Sources */ = {isa = PBXBuildFile; fileRef = 5241748516DB01A700ECAB5E /* CLMComponent.m */; };
+		5241748916DB01C500ECAB5E /* CLMSystem.m in Sources */ = {isa = PBXBuildFile; fileRef = 5241748816DB01C500ECAB5E /* CLMSystem.m */; };
+		5241748C16DB020D00ECAB5E /* CLMEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 5241748B16DB020D00ECAB5E /* CLMEntity.m */; };
+		5241748F16DB07C600ECAB5E /* CLMEntityManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5241748E16DB07C600ECAB5E /* CLMEntityManager.m */; };
+		5241749216DB083700ECAB5E /* CLMTagManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5241749116DB083700ECAB5E /* CLMTagManager.m */; };
+		5241749A16DB0B3800ECAB5E /* CLMComponent.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 5241748416DB01A700ECAB5E /* CLMComponent.h */; };
+		5241749B16DB0B3800ECAB5E /* CLMSystem.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 5241748716DB01C500ECAB5E /* CLMSystem.h */; };
+		5241749C16DB0B3800ECAB5E /* CLMEntity.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 5241748A16DB020D00ECAB5E /* CLMEntity.h */; };
+		5241749D16DB0B3800ECAB5E /* CLMEntityManager.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 5241748D16DB07C600ECAB5E /* CLMEntityManager.h */; };
+		5241749E16DB0B3800ECAB5E /* CLMTagManager.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 5241749016DB083700ECAB5E /* CLMTagManager.h */; };
+		524174A916DB105000ECAB5E /* CLMGroupManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 524174A816DB105000ECAB5E /* CLMGroupManager.m */; };
+		524174AC16DB107A00ECAB5E /* CLMSystemManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 524174AB16DB107A00ECAB5E /* CLMSystemManager.m */; };
+		524174AD16DB108600ECAB5E /* CLMGroupManager.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 524174A716DB105000ECAB5E /* CLMGroupManager.h */; };
+		524174AE16DB108600ECAB5E /* CLMSystemManager.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 524174AA16DB107A00ECAB5E /* CLMSystemManager.h */; };
+		5241750816DDBC8B00ECAB5E /* CLMWorld.m in Sources */ = {isa = PBXBuildFile; fileRef = 5241750716DDBC8B00ECAB5E /* CLMWorld.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		5241743116DAFFD100ECAB5E /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/${PRODUCT_NAME}";
+			dstSubfolderSpec = 16;
+			files = (
+				524174AD16DB108600ECAB5E /* CLMGroupManager.h in CopyFiles */,
+				524174AE16DB108600ECAB5E /* CLMSystemManager.h in CopyFiles */,
+				5241749A16DB0B3800ECAB5E /* CLMComponent.h in CopyFiles */,
+				5241749B16DB0B3800ECAB5E /* CLMSystem.h in CopyFiles */,
+				5241749C16DB0B3800ECAB5E /* CLMEntity.h in CopyFiles */,
+				5241749D16DB0B3800ECAB5E /* CLMEntityManager.h in CopyFiles */,
+				5241749E16DB0B3800ECAB5E /* CLMTagManager.h in CopyFiles */,
+				5241743C16DAFFD100ECAB5E /* EMF.h in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		5241743316DAFFD100ECAB5E /* libEMF.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libEMF.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		5241743616DAFFD100ECAB5E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		5241743A16DAFFD100ECAB5E /* EMF-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "EMF-Prefix.pch"; sourceTree = "<group>"; };
+		5241743B16DAFFD100ECAB5E /* EMF.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EMF.h; sourceTree = "<group>"; };
+		5241748416DB01A700ECAB5E /* CLMComponent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLMComponent.h; sourceTree = "<group>"; };
+		5241748516DB01A700ECAB5E /* CLMComponent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CLMComponent.m; sourceTree = "<group>"; };
+		5241748716DB01C500ECAB5E /* CLMSystem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLMSystem.h; sourceTree = "<group>"; };
+		5241748816DB01C500ECAB5E /* CLMSystem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CLMSystem.m; sourceTree = "<group>"; };
+		5241748A16DB020D00ECAB5E /* CLMEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLMEntity.h; sourceTree = "<group>"; };
+		5241748B16DB020D00ECAB5E /* CLMEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CLMEntity.m; sourceTree = "<group>"; };
+		5241748D16DB07C600ECAB5E /* CLMEntityManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLMEntityManager.h; sourceTree = "<group>"; };
+		5241748E16DB07C600ECAB5E /* CLMEntityManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CLMEntityManager.m; sourceTree = "<group>"; };
+		5241749016DB083700ECAB5E /* CLMTagManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLMTagManager.h; sourceTree = "<group>"; };
+		5241749116DB083700ECAB5E /* CLMTagManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CLMTagManager.m; sourceTree = "<group>"; };
+		524174A716DB105000ECAB5E /* CLMGroupManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLMGroupManager.h; sourceTree = "<group>"; };
+		524174A816DB105000ECAB5E /* CLMGroupManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CLMGroupManager.m; sourceTree = "<group>"; };
+		524174AA16DB107A00ECAB5E /* CLMSystemManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLMSystemManager.h; sourceTree = "<group>"; };
+		524174AB16DB107A00ECAB5E /* CLMSystemManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CLMSystemManager.m; sourceTree = "<group>"; };
+		5241750616DDBC8B00ECAB5E /* CLMWorld.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLMWorld.h; sourceTree = "<group>"; };
+		5241750716DDBC8B00ECAB5E /* CLMWorld.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CLMWorld.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5241743016DAFFD100ECAB5E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5241743716DAFFD100ECAB5E /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5241742A16DAFFD100ECAB5E = {
+			isa = PBXGroup;
+			children = (
+				5241743816DAFFD100ECAB5E /* EMF */,
+				5241743516DAFFD100ECAB5E /* Frameworks */,
+				5241743416DAFFD100ECAB5E /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		5241743416DAFFD100ECAB5E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5241743316DAFFD100ECAB5E /* libEMF.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5241743516DAFFD100ECAB5E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5241743616DAFFD100ECAB5E /* Foundation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5241743816DAFFD100ECAB5E /* EMF */ = {
+			isa = PBXGroup;
+			children = (
+				5241743B16DAFFD100ECAB5E /* EMF.h */,
+				5241743916DAFFD100ECAB5E /* Supporting Files */,
+				5241748416DB01A700ECAB5E /* CLMComponent.h */,
+				5241748516DB01A700ECAB5E /* CLMComponent.m */,
+				5241748716DB01C500ECAB5E /* CLMSystem.h */,
+				5241748816DB01C500ECAB5E /* CLMSystem.m */,
+				5241748A16DB020D00ECAB5E /* CLMEntity.h */,
+				5241748B16DB020D00ECAB5E /* CLMEntity.m */,
+				5241748D16DB07C600ECAB5E /* CLMEntityManager.h */,
+				5241748E16DB07C600ECAB5E /* CLMEntityManager.m */,
+				5241749016DB083700ECAB5E /* CLMTagManager.h */,
+				5241749116DB083700ECAB5E /* CLMTagManager.m */,
+				524174A716DB105000ECAB5E /* CLMGroupManager.h */,
+				524174A816DB105000ECAB5E /* CLMGroupManager.m */,
+				524174AA16DB107A00ECAB5E /* CLMSystemManager.h */,
+				524174AB16DB107A00ECAB5E /* CLMSystemManager.m */,
+				5241750616DDBC8B00ECAB5E /* CLMWorld.h */,
+				5241750716DDBC8B00ECAB5E /* CLMWorld.m */,
+			);
+			path = EMF;
+			sourceTree = "<group>";
+		};
+		5241743916DAFFD100ECAB5E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				5241743A16DAFFD100ECAB5E /* EMF-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		5241743216DAFFD100ECAB5E /* EMF */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5241744116DAFFD100ECAB5E /* Build configuration list for PBXNativeTarget "EMF" */;
+			buildPhases = (
+				5241742F16DAFFD100ECAB5E /* Sources */,
+				5241743016DAFFD100ECAB5E /* Frameworks */,
+				5241743116DAFFD100ECAB5E /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = EMF;
+			productName = EMF;
+			productReference = 5241743316DAFFD100ECAB5E /* libEMF.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		5241742B16DAFFD100ECAB5E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0460;
+				ORGANIZATIONNAME = "Classy Monsters";
+			};
+			buildConfigurationList = 5241742E16DAFFD100ECAB5E /* Build configuration list for PBXProject "EMF" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 5241742A16DAFFD100ECAB5E;
+			productRefGroup = 5241743416DAFFD100ECAB5E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				5241743216DAFFD100ECAB5E /* EMF */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5241742F16DAFFD100ECAB5E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5241748616DB01A700ECAB5E /* CLMComponent.m in Sources */,
+				5241748916DB01C500ECAB5E /* CLMSystem.m in Sources */,
+				5241748C16DB020D00ECAB5E /* CLMEntity.m in Sources */,
+				5241748F16DB07C600ECAB5E /* CLMEntityManager.m in Sources */,
+				5241749216DB083700ECAB5E /* CLMTagManager.m in Sources */,
+				524174A916DB105000ECAB5E /* CLMGroupManager.m in Sources */,
+				524174AC16DB107A00ECAB5E /* CLMSystemManager.m in Sources */,
+				5241750816DDBC8B00ECAB5E /* CLMWorld.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		5241743F16DAFFD100ECAB5E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		5241744016DAFFD100ECAB5E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		5241744216DAFFD100ECAB5E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DSTROOT = /tmp/EMF.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "EMF/EMF-Prefix.pch";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		5241744316DAFFD100ECAB5E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DSTROOT = /tmp/EMF.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "EMF/EMF-Prefix.pch";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		5241742E16DAFFD100ECAB5E /* Build configuration list for PBXProject "EMF" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5241743F16DAFFD100ECAB5E /* Debug */,
+				5241744016DAFFD100ECAB5E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5241744116DAFFD100ECAB5E /* Build configuration list for PBXNativeTarget "EMF" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5241744216DAFFD100ECAB5E /* Debug */,
+				5241744316DAFFD100ECAB5E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 5241742B16DAFFD100ECAB5E /* Project object */;
+}
