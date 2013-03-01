@@ -12,14 +12,12 @@
 {
 	NSNumber *_entityID;
 	CLMWorld *_world;
-	NSString *_groupTag;
-	NSString *_identifierTag;
 }
 
 @property (nonatomic, readonly) NSNumber *entityID;
 @property (nonatomic, readonly) CLMWorld *world;
 @property (nonatomic, strong) NSString *groupTag;
-@property (nonatomic, strong) NSString *identifierTag;
+@property (nonatomic, strong) NSString *identifierType;
 @property (nonatomic, assign) BOOL deleted;
 
 - (id)initWithWorld:(CLMWorld*)world andEntityID:(NSNumber *)entityID;
