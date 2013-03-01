@@ -17,6 +17,16 @@
 
 @implementation CLMSystemManager
 
+- (id)init
+{
+    self = [super init];
+    if (self)
+    {
+        _systems = [[NSMutableDictionary alloc] init];
+    }
+    return self;
+}
+
 - (void)addSystem:(CLMSystem *)system
 {
     if (![self.systems objectForKey:[system identifierType]])

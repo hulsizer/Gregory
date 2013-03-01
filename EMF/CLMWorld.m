@@ -33,7 +33,8 @@ static CLMWorld *sharedWorld;
 - (id)init
 {
     self = [super init];
-    if (self) {
+    if (self)
+    {
         _entityManager = [[CLMEntityManager alloc] init];
         _systemManager = [[CLMSystemManager alloc] init];
         _groupManager = [[CLMGroupManager alloc] init];
@@ -103,7 +104,7 @@ static CLMWorld *sharedWorld;
     for (CLMSystem *system in [self.systemManager systemsOranizedByRunPriority])
     {
         NSString *identifier = [system identifierType];
-        NSSet *entites = [self.groupManager getObjectForTag:identifier];
+        NSSet *entites = [self.groupManager objectsForTag:identifier];
         
         for (CLMEntity *entity in entites) {
             [system processEntity:entity];

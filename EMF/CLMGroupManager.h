@@ -12,5 +12,5 @@
 
 - (void)addObject:(NSObject *)object forTag:(NSString *)tag;
 - (void)removeObject:(NSObject *)object forTag:(NSString *)tag;
-- (NSSet *)getObjectForTag:(NSString *)tag;
+- (NSSet *)objectsForTag:(NSString *)tag;
 @end
