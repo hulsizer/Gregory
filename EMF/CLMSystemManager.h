@@ -11,6 +11,7 @@
 @interface CLMSystemManager : NSObject
 
 - (void)addSystem:(CLMSystem *)system;
-- (CLMSystem *)getSystemForType:(NSString*)systemType;
-- (NSSet*)systemsOranizedByRunPriority;
+- (void)removeSystemForType:(NSString *)systemType;
+- (CLMSystem *)getSystemForType:(NSString *)systemType;
+- (NSSet *)systemsOranizedByRunPriority;
 @end
