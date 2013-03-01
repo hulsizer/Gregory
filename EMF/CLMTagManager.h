@@ -10,7 +10,7 @@
 @class CLMEntity;
 @interface CLMTagManager : NSObject
 
-- (void)addObject:(NSObject*)object forTag:(NSString*)tag;
-- (void)removeObject:(NSObject*)object forTag:(NSString*)tag;
-- (NSObject*)getObjectForTag:(NSString*)tag;
+- (void)addObject:(NSObject *)object forTag:(NSString *)tag;
+- (void)removeObject:(NSObject *)object forTag:(NSString *)tag;
+- (NSObject *)getObjectForTag:(NSString *)tag;
 @end

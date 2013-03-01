@@ -10,6 +10,7 @@
 @class CLMEntity;
 @interface CLMSystem : NSObject
 @property (nonatomic, readonly) NSString *identifierType;
+@property (nonatomic, strong) NSNumber *runPriority;
 
 - (void)processEntity:(CLMEntity*)entity;
 @end

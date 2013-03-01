@@ -10,7 +10,7 @@
 
 @interface CLMGroupManager : NSObject
 
-- (void)addObject:(NSObject*)object forTag:(NSString*)tag;
-- (void)removeObject:(NSObject*)object forTag:(NSString*)tag;
-- (NSSet*)getObjectForTag:(NSString*)tag;
+- (void)addObject:(NSObject *)object forTag:(NSString *)tag;
+- (void)removeObject:(NSObject *)object forTag:(NSString *)tag;
+- (NSSet *)getObjectForTag:(NSString *)tag;
 @end

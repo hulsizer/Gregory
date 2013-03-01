@@ -7,7 +7,89 @@
 //
 
 #import "CLMWorld.h"
+#import "CLMEntityManager.h"
+#import "CLMSystemManager.h"
+#import "CLMTagManager.h"
+#import "CLMGroupManager.h"
+#import "CLMEntity.h"
+#import "CLMSystem.h"
+
+@interface CLMWorld ()
+
+@property (nonatomic, strong) CLMEntityManager *entityManager;
+@property (nonatomic, strong) CLMSystemManager *systemManager;
+@property (nonatomic, strong) CLMGroupManager  *groupManager;
+
+@property (nonatomic, strong) NSMutableDictionary *systems;
+@property (nonatomic, strong) NSMutableDictionary *entities;
+
+@property (nonatomic, strong) NSNumber *entityID;
+@end
 
 @implementation CLMWorld
 
+- (CLMEntityManager *)entityManager
+{
+    return self.entityManager;
+}
+
+- (CLMSystemManager *)systemManager
+{
+    return self.systemManager;
+}
+
+- (CLMEntity *)createEntity
+{
+    CLMEntity *newEntity = [[CLMEntity alloc] initWithWorld:self andEntityID:[self getNewEntityID]];
+    [self.entities setObject:newEntity forKey:newEntity.entityID];
+    
+    return newEntity;
+}
+
+- (CLMEntity *)getEntityForID:(NSNumber *)entityID
+{
+    return [self.entities objectForKey:entityID];
+}
+
+- (void)removeEntity:(CLMEntity *)entity
+{
+    [self removeEntityForID:entity.entityID];
+}
+
+- (void)removeEntityForID:(NSNumber *)entityID
+{
+    [self.entities removeObjectForKey:entityID];
+}
+
+- (void)refreshEntity:(CLMEntity *)entity
+{
+    [entity refresh];
+}
+
+- (void)refreshEntityForID:(NSNumber *)entityID
+{
+    CLMEntity *entity = [self getEntityForID:entityID];
+    [entity refresh];
+}
+
+- (void)step:(float)delta
+{
+    for (CLMSystem *system in [self.systemManager systemsOranizedByRunPriority])
+    {
+        NSString *identifier = [system identifierType];
+        NSSet *entites = [self.groupManager getObjectForTag:identifier];
+        
+        for (CLMEntity *entity in entites) {
+            [system processEntity:entity];
+        }
+    }
+}
+                            
+#pragma mark - Private
+                            
+- (NSNumber *)getNewEntityID
+{
+    self.entityID = [NSNumber numberWithInt:[self.entityID integerValue] + 1];
+    return self.entityID;
+}
 @end

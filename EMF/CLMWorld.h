@@ -12,13 +12,15 @@
 @class CLMSystemManager;
 @interface CLMWorld : NSObject
 
-- (CLMEntityManager*)entityManager;
-- (CLMSystemManager*)systemManager;
+- (CLMEntityManager *)entityManager;
+- (CLMSystemManager *)systemManager;
 
-- (CLMEntity*)createEntity;
-- (CLMEntity*)getEntityForID:(NSInteger)entityID;
-- (void)removeEntity:(CLMEntity*)entity;
-- (void)removeEntityForID:(NSInteger)entityID;
-- (void)refreshEntity:(CLMEntity*)entity;
-- (void)refreshEntityForID:(NSInteger)entityID;
+- (CLMEntity *)createEntity;
+- (CLMEntity *)getEntityForID:(NSNumber *)entityID;
+- (void)removeEntity:(CLMEntity *)entity;
+- (void)removeEntityForID:(NSNumber *)entityID;
+- (void)refreshEntity:(CLMEntity *)entity;
+- (void)refreshEntityForID:(NSNumber *)entityID;
+
+- (void)step:(float)delta;
 @end
