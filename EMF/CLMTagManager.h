@@ -11,6 +11,6 @@
 @interface CLMTagManager : NSObject
 
 - (void)addObject:(NSObject *)object forTag:(NSString *)tag;
-- (void)removeObject:(NSObject *)object forTag:(NSString *)tag;
+- (void)removeObjectForTag:(NSString *)tag;
 - (NSObject *)getObjectForTag:(NSString *)tag;
 @end
