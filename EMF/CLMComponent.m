@@ -10,4 +10,13 @@
 
 @implementation CLMComponent
 
+- (id)init
+{
+    self = [super init];
+    if (self)
+    {
+        _identifierType = @"DefaultComponent";
+    }
+    return self;
+}
 @end
