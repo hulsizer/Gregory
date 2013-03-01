@@ -14,6 +14,8 @@
 #import "CLMEntity.h"
 #import "CLMSystem.h"
 
+static CLMWorld *sharedWorld;
+
 @interface CLMWorld ()
 
 @property (nonatomic, strong) CLMEntityManager *entityManager;
@@ -27,6 +29,30 @@
 @end
 
 @implementation CLMWorld
+
+- (id)init
+{
+    self = [super init];
+    if (self) {
+        _entityManager = [[CLMEntityManager alloc] init];
+        _systemManager = [[CLMSystemManager alloc] init];
+        _groupManager = [[CLMGroupManager alloc] init];
+        _entities = [[NSMutableDictionary alloc] init];
+        _systems = [[NSMutableDictionary alloc] init];
+        _entityID = [NSNumber numberWithInt:0];
+    }
+    return self;
+}
+
++ (CLMWorld*)sharedWorld
+{
+    static dispatch_once_t once;
+    
+    dispatch_once(&once, ^{
+        sharedWorld = [[self alloc] init];
+    });
+    return sharedWorld;
+}
 
 - (CLMEntityManager *)entityManager
 {

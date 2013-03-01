@@ -12,6 +12,8 @@
 @class CLMSystemManager;
 @interface CLMWorld : NSObject
 
++ (CLMWorld*)sharedWorld;
+
 - (CLMEntityManager *)entityManager;
 - (CLMSystemManager *)systemManager;
 
