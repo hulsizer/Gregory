@@ -10,4 +10,19 @@
 
 @implementation CLMSystem
 
+- (id)init
+{
+    self = [super init];
+    if (self)
+    {
+        _identifierType = @"DefaultSystem";
+        _runPriority = [NSNumber numberWithInt:0];
+    }
+    return self;
+}
+
+- (void)processEntity:(CLMEntity*)entity
+{
+    
+}
 @end
