@@ -22,10 +22,6 @@ static CLMWorld *sharedWorld;
 @property (nonatomic, strong) CLMSystemManager *systemManager;
 @property (nonatomic, strong) CLMGroupManager  *groupManager;
 
-@property (nonatomic, strong) NSMutableDictionary *systems;
-@property (nonatomic, strong) NSMutableDictionary *entities;
-
-@property (nonatomic, strong) NSNumber *entityID;
 @end
 
 @implementation CLMWorld
@@ -38,9 +34,6 @@ static CLMWorld *sharedWorld;
         _entityManager = [[CLMEntityManager alloc] init];
         _systemManager = [[CLMSystemManager alloc] init];
         _groupManager = [[CLMGroupManager alloc] init];
-        _entities = [[NSMutableDictionary alloc] init];
-        _systems = [[NSMutableDictionary alloc] init];
-        _entityID = [NSNumber numberWithInt:0];
     }
     return self;
 }
@@ -67,15 +60,14 @@ static CLMWorld *sharedWorld;
 
 - (CLMEntity *)createEntity
 {
-    CLMEntity *newEntity = [[CLMEntity alloc] initWithWorld:self andEntityID:[self getNewEntityID]];
-    [self.entities setObject:newEntity forKey:newEntity.entityID];
-    
+    CLMEntity *newEntity = [self.entityManager createEntity];
+
     return newEntity;
 }
 
 - (CLMEntity *)getEntityForID:(NSNumber *)entityID
 {
-    return [self.entities objectForKey:entityID];
+    return [self.entityManager entityForID:entityID];
 }
 
 - (void)removeEntity:(CLMEntity *)entity
@@ -85,7 +77,7 @@ static CLMWorld *sharedWorld;
 
 - (void)removeEntityForID:(NSNumber *)entityID
 {
-    [self.entities removeObjectForKey:entityID];
+    [self.entityManager removeEntityForID:entityID];
 }
 
 - (void)refreshEntity:(CLMEntity *)entity
@@ -112,11 +104,5 @@ static CLMWorld *sharedWorld;
     }
 }
                             
-#pragma mark - Private
-                            
-- (NSNumber *)getNewEntityID
-{
-    self.entityID = [NSNumber numberWithInt:[self.entityID integerValue] + 1];
-    return self.entityID;
-}
+
 @end

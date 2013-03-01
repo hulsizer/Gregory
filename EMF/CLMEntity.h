@@ -7,7 +7,11 @@
 //
 
 #import <Foundation/Foundation.h>
+
 @class CLMWorld;
+@class CLMComponent;
+@class CLMSystem;
+
 @interface CLMEntity : NSObject
 {
 	NSNumber *_entityID;
@@ -21,5 +25,16 @@
 @property (nonatomic, assign) BOOL deleted;
 
 - (id)initWithWorld:(CLMWorld*)world andEntityID:(NSNumber *)entityID;
+
+- (void)addComponent:(CLMComponent *)component;
+- (CLMComponent *)getComponentOfType:(NSString *)componentType;
+- (BOOL)hasComponentOfType:(NSString *)componentType;
+- (void)removeComponentOfType:(NSString *)componentType;
+
+- (void)addSystem:(CLMSystem *)system;
+- (CLMSystem *)getSystemOfType:(NSString *)systemType;
+- (BOOL)hasSystemOfType:(NSString *)systemType;
+- (void)removeSystemOfType:(NSString *)systemType;
+
 - (void)refresh;
 @end

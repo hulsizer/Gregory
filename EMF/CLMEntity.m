@@ -7,6 +7,14 @@
 //
 
 #import "CLMEntity.h"
+#import "CLMComponent.h"
+#import "CLMSystem.h"
+#import "CLMWorld.h"
+#import "CLMEntityManager.h"
+
+@interface CLMEntity ()
+
+@end
 
 @implementation CLMEntity
 
@@ -41,5 +49,47 @@
 - (void)refresh
 {
     
+}
+
+#pragma mark - Components
+- (void)addComponent:(CLMComponent *)component
+{
+    [self.world.entityManager addComponent:component toEntityID:self.entityID];
+}
+
+- (CLMComponent *)getComponentOfType:(NSString *)componentType
+{
+    return [self.world.entityManager getComponentOfType:componentType forEntityID:self.entityID];
+}
+
+- (BOOL)hasComponentOfType:(NSString *)componentType
+{
+    return [self.world.entityManager entityID:self.entityID hasComponentOfType:componentType];
+}
+
+- (void)removeComponentOfType:(NSString *)componentType
+{
+    [self.world.entityManager removeComponentOfType:componentType forEntityID:self.entityID];
+}
+
+#pragma mark - Systems
+- (void)addSystem:(CLMSystem *)system
+{
+    [self.world.entityManager addSystem:system toEntityID:self.entityID];
+}
+
+- (CLMSystem *)getSystemOfType:(NSString *)systemType
+{
+    return [self.world.entityManager getSystemOfType:systemType forEntityID:self.entityID];
+}
+
+- (BOOL)hasSystemOfType:(NSString *)systemType
+{
+    return [self.world.entityManager entityID:self.entityID hasSystemOfType:systemType];
+}
+
+- (void)removeSystemOfType:(NSString *)systemType
+{
+    [self.world.entityManager removeSystemOfType:systemType forEntityID:self.entityID];
 }
 @end
