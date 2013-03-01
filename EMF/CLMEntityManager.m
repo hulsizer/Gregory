@@ -11,6 +11,7 @@
 #import "CLMEntity.h"
 #import "CLMSystem.h"
 #import "CLMComponent.h"
+#import "CLMGroupManager.h"
 
 @interface CLMEntityManager ()
 
@@ -125,10 +126,11 @@
     [self removeSystemOfType:systemType forEntityID:entity.entityID];
 }
 
-- (void)addSystem:(CLMSystem *)component toEntityID:(NSNumber *)entityID
+- (void)addSystem:(CLMSystem *)system toEntityID:(NSNumber *)entityID
 {
-    NSMutableDictionary *entitesForSystem = [self getSystemsForSystem:[component identifierType]];
-    [entitesForSystem setObject:component forKey:entityID];
+    NSMutableDictionary *entitesForSystem = [self getSystemsForSystem:[system identifierType]];
+    [entitesForSystem setObject:system forKey:entityID];
+    [self addEntityIDToSystemGroup:entityID systemType:[system identifierType]];
 }
 
 - (CLMSystem *)getSystemOfType:(NSString *)systemType forEntityID:(NSNumber *)entityID
@@ -147,9 +149,30 @@
 {
     NSMutableDictionary *entitesForSystem = [self getEntitesForComponent:systemType];
     [entitesForSystem removeObjectForKey:entityID];
+    [self removeEntityIDFromSystemGroup:entityID systemType:systemType];
 }
 
 #pragma mark - Private
+
+- (void)addEntityToSystemGroup:(CLMEntity*)entity systemType:(NSString *)systemType
+{
+    [self.world.groupManager addObject:entity forTag:systemType];
+}
+
+- (void)addEntityIDToSystemGroup:(NSNumber*)entityID systemType:(NSString *)systemType
+{
+    [self addEntityToSystemGroup:[self entityForID:entityID] systemType:systemType];
+}
+
+- (void)removeEntityFromSystemGroup:(CLMEntity*)entity systemType:(NSString *)systemType
+{
+    [self.world.groupManager removeObject:entity forTag:systemType];
+}
+
+- (void)removeEntityIDFromSystemGroup:(NSNumber *)entityID systemType:(NSString *)systemType
+{
+    [self removeEntityFromSystemGroup:[self entityForID:entityID] systemType:systemType];
+}
 
 - (NSMutableDictionary*)getEntitesForComponent:(NSString *)componentType
 {

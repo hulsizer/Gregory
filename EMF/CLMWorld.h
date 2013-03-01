@@ -10,12 +10,15 @@
 @class CLMEntity;
 @class CLMEntityManager;
 @class CLMSystemManager;
+@class CLMGroupManager;
+
 @interface CLMWorld : NSObject
 
 + (CLMWorld*)sharedWorld;
 
 - (CLMEntityManager *)entityManager;
 - (CLMSystemManager *)systemManager;
+- (CLMGroupManager *)groupManager;
 
 - (CLMEntity *)createEntity;
 - (CLMEntity *)getEntityForID:(NSNumber *)entityID;

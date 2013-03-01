@@ -38,7 +38,7 @@
 - (BOOL)entity:(CLMEntity *)entity hasSystemOfType:(NSString *)systemType;
 - (void)removeSystemOfType:(NSString *)systemType forEntity:(CLMEntity *)entity;
 
-- (void)addSystem:(CLMSystem *)component toEntityID:(NSNumber *)entityID;
+- (void)addSystem:(CLMSystem *)system toEntityID:(NSNumber *)entityID;
 - (CLMSystem *)getSystemOfType:(NSString *)systemType forEntityID:(NSNumber *)entityID;
 - (BOOL)entityID:(NSNumber *)entityID hasSystemOfType:(NSString *)systemType;
 - (void)removeSystemOfType:(NSString *)systemType forEntityID:(NSNumber *)entityID;
