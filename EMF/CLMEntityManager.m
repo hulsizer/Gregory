@@ -12,6 +12,7 @@
 #import "CLMSystem.h"
 #import "CLMComponent.h"
 #import "CLMGroupManager.h"
+#import "CLMTagManager.h"
 
 @interface CLMEntityManager ()
 
@@ -49,7 +50,11 @@
 
 - (void)removeEntityForID:(NSNumber *)entityID
 {
+    CLMEntity *entity = [self entityForID:entityID];
+    [self.world.groupManager removeObject:entity];
+    
     [self.entities removeObjectForKey:entityID];
+    
 }
 
 - (CLMEntity *)entityForID:(NSNumber *)entityID

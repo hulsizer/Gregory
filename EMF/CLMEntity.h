@@ -20,7 +20,6 @@
 
 @property (nonatomic, readonly) NSNumber *entityID;
 @property (nonatomic, readonly) CLMWorld *world;
-@property (nonatomic, strong) NSString *groupTag;
 @property (nonatomic, strong) NSString *identifierType;
 @property (nonatomic, assign) BOOL deleted;
 

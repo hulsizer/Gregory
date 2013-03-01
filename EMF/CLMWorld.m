@@ -21,6 +21,8 @@ static CLMWorld *sharedWorld;
 @property (nonatomic, strong) CLMEntityManager *entityManager;
 @property (nonatomic, strong) CLMSystemManager *systemManager;
 @property (nonatomic, strong) CLMGroupManager  *groupManager;
+@property (nonatomic, strong) NSMutableArray *refreshed;
+@property (nonatomic, strong) NSMutableArray *deleted;
 
 @end
 
@@ -34,6 +36,8 @@ static CLMWorld *sharedWorld;
         _entityManager = [[CLMEntityManager alloc] init];
         _systemManager = [[CLMSystemManager alloc] init];
         _groupManager = [[CLMGroupManager alloc] init];
+        _refreshed = [[NSMutableArray alloc] init];
+        _deleted = [[NSMutableArray alloc] init];
     }
     return self;
 }
@@ -77,18 +81,24 @@ static CLMWorld *sharedWorld;
 
 - (void)removeEntityForID:(NSNumber *)entityID
 {
-    [self.entityManager removeEntityForID:entityID];
+    if (![self.deleted containsObject:entityID])
+    {
+        [self.deleted addObject:entityID];
+    }
 }
 
 - (void)refreshEntity:(CLMEntity *)entity
 {
-    [entity refresh];
+    if (![self.refreshed containsObject:entity])
+    {
+        [self.refreshed addObject:entity];
+    }
 }
 
 - (void)refreshEntityForID:(NSNumber *)entityID
 {
     CLMEntity *entity = [self getEntityForID:entityID];
-    [entity refresh];
+    [self refreshEntity:entity];
 }
 
 - (void)step:(float)delta
@@ -102,6 +112,19 @@ static CLMWorld *sharedWorld;
             [system processEntity:entity];
         }
     }
+    
+    for (CLMEntity *entity in self.refreshed)
+    {
+        [entity refresh];
+    }
+    [self.refreshed removeAllObjects];
+    
+    for (NSNumber *entityID in self.deleted)
+    {
+        [self.entityManager removeEntityForID:entityID];
+    }
+    [self.deleted removeAllObjects];
+    
 }
                             
 

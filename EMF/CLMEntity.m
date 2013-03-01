@@ -25,7 +25,6 @@
     {
         _world = nil;
         _entityID = nil;
-        _groupTag = @"";
         _identifierType = @"";
         _deleted = FALSE;
     }
@@ -39,7 +38,6 @@
     {
         _world = world;
         _entityID = entityID;
-        _groupTag = @"";
         _identifierType = @"";
         _deleted = FALSE;
     }
@@ -92,4 +90,5 @@
 {
     [self.world.entityManager removeSystemOfType:systemType forEntityID:self.entityID];
 }
+
 @end
